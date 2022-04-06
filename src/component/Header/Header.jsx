@@ -1,6 +1,5 @@
 import "./Header.scss";
 import Logo from "../../component/Logo/Logo";
-import CustomButton from "../CustomButton/CustomButton";
 import { Link } from "react-router-dom";
 
 const Header = () => {
