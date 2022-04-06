@@ -13,7 +13,7 @@ const Blogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       const res = await axios.get(
-        "http://giropay.xyz/api/v1/giro-app/products"
+        "https://giropay.xyz/api/v1/giro-app/products"
       );
       setBlogs(res.data.data);
     };
