@@ -59,11 +59,9 @@ function App() {
         ) : null}
         <Switch>
           <Route exact path="/" component={Homepage} />
-          {/* <Route exact path="/signin" component={Signin} />
-          <Route exact path="/register" component={Register} /> */}
            <Route exact path='/signin' render={() => currentUser ? (<Redirect to='/' />) : (<Signin/>)}/>
            <Route exact path='/register' render={() => currentUser ? (<Redirect to='/' />) : (<Register/>)}/>
-          <Route exact path="/blogs" component={Blogs} />
+          <Route exact path="/blogs" render={() => currentUser ? ((<Blogs/>)) : <Redirect to='/' /> } />
         </Switch>
       </div>
     </BrowserRouter>
