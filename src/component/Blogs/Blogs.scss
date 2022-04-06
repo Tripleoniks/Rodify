@@ -8,8 +8,11 @@
       background-color: #f4f4f4;
       outline: none;
       font-size: 40px;
-      color: #fff;
+      color: #000000;
       width: fit-content;
+      i{
+          color: #BABABA;
+      }
     }
   }
 
@@ -79,8 +82,8 @@
 
 @media screen and (max-width: 768px) {
   .blogs {
-    // padding: 1rem;
-    p {
+
+     p {
       font-size: 16px !important;
       width: 90% !important;
     }

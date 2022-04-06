@@ -7,12 +7,10 @@
   .row {
     align-items: center;
     justify-content: space-between;
-    .logo-row {
-      // text-align: start;
-    }
     .group-button {
       text-align: end;
-      // padding: 1rem;
+      width: fit-content;
+      align-items: center;
 
       .signin {
         background-color: $primary-color;
@@ -48,6 +46,28 @@
       }
     }
   }
+  .logout{
+    background-color: $primary-color;
+    border: 1px solid $secondary-color;
+    border-radius: 8px;
+    color: #fff;
+    padding: 1rem 4rem;
+    margin: 0 1rem;
+    font-weight: bolder;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+      background-color: $secondary-color;
+      border: 1px solid $primary-color;
+      transition: ease-in-out 0.3s;
+    }
+  }
+  .user{
+    display: block;
+    width: fit-content;
+     margin: 0 1.2rem;
+   font-size: 36px;
+  }
 }
 
 @media screen and (max-width: 736px) {
@@ -67,6 +87,9 @@
           padding: 1rem 0;
         }
       }
+    }
+    .user{
+      font-size: 24px !important; 
     }
   }
 }

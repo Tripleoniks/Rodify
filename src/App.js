@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "../src/component/Header/Header";
@@ -12,14 +12,37 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Register from "./component/Authentication/signup/signup";
 import { useState } from "react";
+import axios from "axios";
+
+const config = {
+  headers: {
+    Authorization: "Bearer " + localStorage.getItem("GIRO_TOKEN"),
+  }
+}
+
+const currentUser = localStorage.GIRO_TOKEN
 
 function App() {
+
+  useEffect(() => {
+    if(currentUser){
+      axios.get("https://giropay.xyz/api/v1/giro-app/auth/me", config)
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
+    }
+  }, [])
+
   useEffect(() => {
     AOS.init({ duration: 1500 });
     AOS.refresh();
   }, []);
 
   const [notification, setNotification] = useState(true);
+
+  // useEffect(() => {
+    
+  // }, [])
+
 
   return (
     <BrowserRouter>
@@ -36,8 +59,10 @@ function App() {
         ) : null}
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/signin" component={Signin} />
-          <Route exact path="/register" component={Register} />
+          {/* <Route exact path="/signin" component={Signin} />
+          <Route exact path="/register" component={Register} /> */}
+           <Route exact path='/signin' render={() => currentUser ? (<Redirect to='/' />) : (<Signin/>)}/>
+           <Route exact path='/register' render={() => currentUser ? (<Redirect to='/' />) : (<Register/>)}/>
           <Route exact path="/blogs" component={Blogs} />
         </Switch>
       </div>

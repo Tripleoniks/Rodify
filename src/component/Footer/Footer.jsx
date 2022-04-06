@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="row link-row">
         <p className="col-md-3">
           {" "}
-          <Link to="/">Blog</Link>
+          <Link to="/blogs">Blog</Link>
         </p>
         <p className="col-md-3">
           {" "}

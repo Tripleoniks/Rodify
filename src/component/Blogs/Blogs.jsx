@@ -37,9 +37,9 @@ const Blogs = () => {
       <div className="top-post">
         <button id="top-btn" onClick={togglePost}>
           {topIcon ? (
-            <i className="fa-solid fa-circle-chevron-down"></i>
-          ) : (
             <i className="fa-solid fa-circle-chevron-up"></i>
+          ) : (
+            <i className="fa-solid fa-circle-chevron-down"></i>
           )}{" "}
           Top Trend
         </button>
@@ -62,9 +62,9 @@ const Blogs = () => {
         <div className="top-post">
           <button id="top-btn" onClick={toggleTrendingPost}>
             {trendIcon ? (
-              <i className="fa-solid fa-circle-chevron-down"></i>
-            ) : (
               <i className="fa-solid fa-circle-chevron-up"></i>
+            ) : (
+              <i className="fa-solid fa-circle-chevron-down"></i>
             )}{" "}
             Trending
           </button>

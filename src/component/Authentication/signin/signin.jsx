@@ -29,11 +29,13 @@ const Authentication = (props) => {
         "https://giropay.xyz/api/v1/giro-app/auth/login", formFields
       );
       console.log(user);
+      localStorage.setItem("GIRO_TOKEN", user?.data?.token);
+      localStorage.setItem("currentUser", user?.data?.token)
       resetFormField();
       setIsLoading(false);
       if (user.status === 200) {
         toast.success("Welcome");
-        history.push("/", { data: formFields });
+        window.location.href ="/blogs"
       }
     } catch (error) {
       console.log(error);

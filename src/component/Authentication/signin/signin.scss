@@ -49,6 +49,9 @@
           color: #fff;
           padding: 1rem 0;
           font-size: 32px;
+          outline: none !important;
+          -webkit-appearance: none;
+          box-shadow: none !important;
         }
       }
     }
