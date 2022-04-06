@@ -27,8 +27,6 @@ function App() {
   useEffect(() => {
     if(currentUser){
       axios.get("https://giropay.xyz/api/v1/giro-app/auth/me", config)
-      .then(res => console.log(res))
-      .catch(err => console.log(err))
     }
   }, [])
 
