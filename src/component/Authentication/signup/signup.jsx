@@ -32,7 +32,7 @@ const Register = () => {
       resetFormField();
       setIsLoading(false);
       toast.success("User successfully created");
-      history.push("/");
+      history.push("/signin");
     } catch (error) {
       console.log(error);
       setIsLoading(false);
