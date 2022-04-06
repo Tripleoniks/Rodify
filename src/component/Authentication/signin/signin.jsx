@@ -26,7 +26,7 @@ const Authentication = (props) => {
     setIsLoading(true);
     try {
       const user = await axios.post(
-        "http://giropay.xyz/api/v1/giro-app/auth/login",
+        "https://giropay.xyz/api/v1/giro-app/auth/login",
         formFields
       );
       console.log(user);

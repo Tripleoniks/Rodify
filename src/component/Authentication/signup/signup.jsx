@@ -26,7 +26,7 @@ const Register = () => {
     setIsLoading(true);
     try {
       const user = await axios.post(
-        "http://giropay.xyz/api/v1/giro-app/auth/register",
+        "https://giropay.xyz/api/v1/giro-app/auth/register",
         formFields
       );
       console.log(user);
