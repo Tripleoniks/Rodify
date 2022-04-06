@@ -17,18 +17,17 @@ import axios from "axios";
 const config = {
   headers: {
     Authorization: "Bearer " + localStorage.getItem("GIRO_TOKEN"),
-  }
-}
+  },
+};
 
-const currentUser = localStorage.GIRO_TOKEN
+const currentUser = localStorage.GIRO_TOKEN;
 
 function App() {
-
   useEffect(() => {
-    if(currentUser){
-      axios.get("https://giropay.xyz/api/v1/giro-app/auth/me", config)
+    if (currentUser) {
+      axios.get("https://giropay.xyz/api/v1/giro-app/auth/me", config);
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
     AOS.init({ duration: 1500 });
@@ -38,9 +37,8 @@ function App() {
   const [notification, setNotification] = useState(true);
 
   // useEffect(() => {
-    
-  // }, [])
 
+  // }, [])
 
   return (
     <BrowserRouter>
@@ -57,9 +55,21 @@ function App() {
         ) : null}
         <Switch>
           <Route exact path="/" component={Homepage} />
-           <Route exact path='/signin' render={() => currentUser ? (<Redirect to='/' />) : (<Signin/>)}/>
-           <Route exact path='/register' render={() => currentUser ? (<Redirect to='/' />) : (<Register/>)}/>
-          <Route exact path="/blogs" render={() => currentUser ? ((<Blogs/>)) : <Redirect to='/' /> } />
+          <Route
+            exact
+            path="/signin"
+            render={() => (currentUser ? <Redirect to="/" /> : <Signin />)}
+          />
+          <Route
+            exact
+            path="/register"
+            render={() => (currentUser ? <Redirect to="/" /> : <Register />)}
+          />
+          <Route
+            exact
+            path="/blogs"
+            render={() => (currentUser ? <Blogs /> : <Redirect to="/" />)}
+          />
         </Switch>
       </div>
     </BrowserRouter>
