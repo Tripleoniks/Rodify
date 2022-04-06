@@ -29,13 +29,10 @@ const Register = () => {
         "https://giropay.xyz/api/v1/giro-app/auth/register",
         formFields
       );
-      console.log(user);
       resetFormField();
       setIsLoading(false);
-      if (user.status === 200) {
-        toast.success("You have successfully registered");
-        history.push("/");
-      }
+      toast.success("User successfully created");
+      history.push("/");
     } catch (error) {
       console.log(error);
       setIsLoading(false);
