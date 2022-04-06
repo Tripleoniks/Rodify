@@ -1,0 +1,84 @@
+@import "../../../scss/colour";
+
+.signin {
+  .sign-row {
+    align-items: center;
+    background-color: #e5e5e5;
+
+    .signin-left {
+      height: 100vh;
+      padding: 2rem 1rem;
+      background-image: url(../../../asset/images/Line3.svg);
+      background-position: right bottom;
+      background-color: $primary-color;
+      background-position: center;
+      background-size: contain;
+      background-repeat: repeat;
+    }
+    .signin-right {
+      h2 {
+        letter-spacing: 4px;
+        margin-bottom: 2.5rem;
+        font-size: 64px;
+      }
+      .signin-form {
+        margin: 0 auto;
+        background-color: #fff;
+        width: 655px;
+        text-align: center;
+        padding: 3rem;
+        border-radius: 16px;
+        .s-form {
+          width: 484px;
+          padding: 1rem;
+          font-size: 32px;
+          border-radius: 16px;
+          outline: none;
+          border: none;
+          margin: 1.5rem auto;
+          background-color: #e5e5e5;
+          outline: 0px !important;
+          -webkit-appearance: none;
+          box-shadow: none !important;
+        }
+        .frm-btn {
+          width: 484px;
+          margin: 1.5rem auto;
+          background-color: $secondary-color;
+          border-radius: 16px;
+          color: #fff;
+          padding: 1rem 0;
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .signin-form {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 736px) {
+  .signin {
+    background-color: #e5e5e5;
+  }
+  .signin-left {
+    background-image: none !important;
+    height: 20vh !important;
+  }
+  .signin-form {
+    width: 100% !important;
+    padding: 0.5rem !important;
+    .s-form,
+    .frm-btn {
+      width: 100% !important;
+    }
+  }
+  .signin-right {
+    height: 80vh !important;
+    display: flex;
+    align-items: center;
+  }
+}

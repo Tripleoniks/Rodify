@@ -1,0 +1,96 @@
+.blogs {
+  background-color: #f4f4f4;
+  .top-post {
+    padding: 1rem;
+
+    #top-btn {
+      border: none;
+      background-color: #f4f4f4;
+      outline: none;
+      font-size: 40px;
+      color: #fff;
+      width: fit-content;
+    }
+  }
+
+  .post-row {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .post-container {
+      position: relative;
+      width: 550px;
+      height: 400px;
+      margin: 1rem;
+      background-position: center;
+      background-size: cover;
+      border-radius: 16px;
+      background-repeat: no-repeat;
+      p {
+        position: absolute;
+        bottom: 0;
+        left: 4%;
+        font-size: 32px;
+        background-color: #63626280;
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 16px;
+        white-space: nowrap;
+        width: 500px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  .trending {
+    .trending-row {
+      position: relative;
+      margin: 1rem;
+      .trending-container {
+        width: 550px;
+        height: 400px;
+        margin: 2rem auto;
+        border-radius: 16px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        p {
+          position: absolute;
+          bottom: 0;
+          left: 4%;
+          font-size: 32px;
+          background-color: #63626280;
+          color: #fff;
+          padding: 1rem 2rem;
+          border-radius: 16px;
+          white-space: nowrap;
+          width: 500px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blogs {
+    // padding: 1rem;
+    p {
+      font-size: 16px !important;
+      width: 90% !important;
+    }
+  }
+  .trending-row {
+    padding: 1rem !important;
+  }
+  .trending-container,
+  .post-container {
+    width: 90% !important;
+    margin: 1rem;
+  }
+}

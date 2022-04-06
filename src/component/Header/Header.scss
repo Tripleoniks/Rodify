@@ -1,0 +1,72 @@
+@import "../../scss/colour";
+
+.header {
+  background-color: #301446;
+  padding: 2rem 1rem;
+  width: 100%;
+  .row {
+    align-items: center;
+    justify-content: space-between;
+    .logo-row {
+      // text-align: start;
+    }
+    .group-button {
+      text-align: end;
+      // padding: 1rem;
+
+      .signin {
+        background-color: $primary-color;
+        border: 1px solid $secondary-color;
+        border-radius: 8px;
+        color: #fff;
+        padding: 1rem 4rem;
+        margin: 0 1rem;
+        font-weight: bolder;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+          background-color: $secondary-color;
+          border: 1px solid $primary-color;
+          transition: ease-in-out 0.3s;
+        }
+      }
+      .register {
+        background-color: $secondary-color;
+        border: 1px solid $primary-color;
+        border-radius: 8px;
+        color: #fff;
+        padding: 1rem 3.3rem;
+        margin: 0 1rem;
+        font-weight: bolder;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+          background-color: $primary-color;
+          border: 1px solid $secondary-color;
+          transition: ease-in-out 0.3s;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .header {
+    padding: 1rem 0;
+    .row {
+      .group-button {
+        text-align: center;
+        display: flex;
+        margin-top: 1.5rem;
+        .signin {
+          width: 100%;
+          padding: 1rem 0;
+        }
+        .register {
+          width: 100%;
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+}

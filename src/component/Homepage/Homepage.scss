@@ -1,0 +1,139 @@
+@import "../../scss/colour";
+
+.homepage {
+  .home-row {
+    align-items: center;
+    background-color: $primary-color;
+    padding: 5rem 2rem !important;
+    color: #fff;
+    .advance-left {
+      h2 {
+        // max-width: 345px;
+        // text-align: justify;
+        // background-color: aqua;
+        letter-spacing: 4px;
+        margin-bottom: 2.5rem;
+        font-size: 64px;
+        #ad-span {
+          color: $secondary-color;
+          border-bottom: 4px solid #fff;
+        }
+      }
+      #id-p {
+        letter-spacing: 5px;
+        // max-width: 485px;
+        margin-bottom: 2rem;
+        font-size: 32px;
+      }
+      .down-row {
+        align-items: center;
+        max-width: 475px;
+        p {
+          font-size: 36px;
+        }
+        .play-app-store-picture {
+          display: flex;
+          img {
+            margin: 0.5rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .advance-right {
+      text-align: end;
+    }
+  }
+
+  .excel-row {
+    padding: 2.5rem 2rem !important;
+    align-items: center;
+    .excel-left {
+      h2 {
+        letter-spacing: 4px;
+        margin-bottom: 2.5rem;
+        font-size: 64px;
+        #ex-span {
+          color: $secondary-color;
+        }
+      }
+      p {
+        letter-spacing: 5px;
+        margin-bottom: 2rem;
+        font-size: 32px;
+      }
+      .get-started {
+        background-color: $secondary-color;
+        color: #fff;
+        font-size: 36px;
+        padding: 1.5rem 0;
+        border-radius: 16px;
+        cursor: pointer;
+        &:hover {
+          background-color: #fff;
+          color: $secondary-color;
+          transition: ease-in-out 0.3s;
+          border: 1px solid $secondary-color;
+        }
+      }
+    }
+    .excel-right {
+      text-align: end;
+
+      img {
+        padding-right: 2rem;
+      }
+    }
+  }
+  .contact-row {
+    background-color: #f4f4f4;
+    padding: 2rem 0 2rem 2rem !important;
+    h2 {
+      letter-spacing: 4px;
+      margin-bottom: 2.5rem;
+      font-size: 64px;
+    }
+    p {
+      letter-spacing: 5px;
+      margin-bottom: 2rem;
+      font-size: 32px;
+    }
+  }
+}
+
+@media (max-width: 736px) {
+  .homepage {
+    h2 {
+      font-size: 24px !important;
+    }
+    p {
+      font-size: 18px !important;
+    }
+    .home-row,
+    .excel-row,
+    .contact-row {
+      padding: 1rem 0 !important;
+      flex-direction: column-reverse;
+    }
+    .play-app-store-picture {
+      img {
+        margin: 0.5rem;
+        width: 80px !important;
+        cursor: pointer;
+        padding-right: 1rem;
+      }
+    }
+  }
+  .excel-right {
+    padding-bottom: 1rem;
+    img {
+      padding: 0.5rem !important;
+    }
+  }
+  .get-started {
+    font-size: 24px !important;
+  }
+  .advance-left {
+    margin-top: 1rem !important;
+  }
+}
